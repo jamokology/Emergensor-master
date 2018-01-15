@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--以下17/12/05追記（全面改訂）-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="emergensor.sample002.myapplication.MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/lineChart"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:text="text2"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toBottomOf="@+id/lineChart"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toTopOf="@+id/webView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:layout_above="@+id/lineChart2" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart2"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lineChart"
+        android:layout_above="@+id/webView" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/lineChart2"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/textView">
+
+    </WebView>
+
+
+    <!--以下17/12/05追記 -->
+    <LinearLayout
+        android:id="@+id/footerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_tab_map"
+                android:button="@null"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/radio_friend"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_tab_friend"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/radio_setting"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_tab_setting"
+                android:button="@null" />
+        </RadioGroup>
+    </LinearLayout>
+
+</RelativeLayout>

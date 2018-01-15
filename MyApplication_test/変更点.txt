@@ -1,0 +1,10 @@
+﻿17/12/05　フルスクリーン表示
+AndroidManifest.xml
+styles.xml
+
+17/12/05 アイコン追加
+drawable
+activity_main.xml
+MainActivity.java
+参考：http://nvtrlab.jp/blog/penco/%E3%80%90android%E3%80%91%E7%94%BB%E9%9D%A2%E4%B8%8B%E5%81%B4%E3%81%8B%E3%82%89tab%E3%81%A3%E3%81%BD%E3%81%84%E3%82%82%E3%81%AE%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%81%A6%E3%81%BF%E3%82%8B.html
+
