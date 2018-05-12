@@ -2,12 +2,12 @@ apply plugin: 'com.android.application'
 apply plugin: "maven"
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "26.0.0"
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "emergensor.sample002.myapplication"
-        minSdkVersion 19
-        targetSdkVersion 25
+        minSdkVersion 15
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -34,11 +34,15 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:appcompat-v7:26.1.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
 
     compile 'com.github.PhilJay:MPAndroidChart:v2.1.5'     // drawing graphs
     //compile 'mirrg.lithium:mirrg.lithium.struct:1.0.1' // Titan Original
-    compile 'com.android.support:gridlayout-v7:25.3.1'
+    compile 'com.android.support:gridlayout-v7:26.1.0'
+
+    //180331addforFacebooklogin/Shohei
+    implementation 'com.facebook.android:facebook-android-sdk:[4,5)'
+
 }
