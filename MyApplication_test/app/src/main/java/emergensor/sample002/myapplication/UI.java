@@ -1,6 +1,7 @@
 package emergensor.sample002.myapplication;
 
 import android.content.pm.ActivityInfo;
+import android.support.v7.app.AppCompatActivity;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.TextView;
@@ -15,7 +16,7 @@ import java.util.LinkedList;
 
 public class UI {
 
-    private final MainActivity mainActivity;
+    private final AppCompatActivity mainActivity;
     private final String url;
     private final int graphSize;
 
@@ -39,14 +40,14 @@ public class UI {
     public LinkedList<Entry> entriesE = new LinkedList<>();
     public LinkedList<Entry> entriesF = new LinkedList<>();
 
-    public UI(MainActivity mainActivity, String url, int graphSize) {
+    public UI(AppCompatActivity mainActivity, String url, int graphSize) {
         this.mainActivity = mainActivity;
         this.url = url;
         this.graphSize = graphSize;
     }
 
     public void preInit() {
-        mainActivity.setContentView(R.layout.activity_main); //どの画面を表示するか
+        mainActivity.setContentView(R.layout.activity_map); //どの画面を表示するか
         mainActivity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); //画面を横にしたとき
     }
 

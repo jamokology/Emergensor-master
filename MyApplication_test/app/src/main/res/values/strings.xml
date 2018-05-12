@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">Emergensor Sample 002</string>
+    <string name="app_name">Emergensor Sample</string>
+
+    <!--180331add for FB login/Shohei-->
+    <string name="facebook_app_id">378723539275089</string>
+    <string name="fb_login_protocol_scheme">fb378723539275089</string>
+
+    <!--180407add for Move to Other Pages/Shohei-->
+    <string name="main">MainActivity</string>
+    <string name="move">MOVE</string>
+    <string name="member">MemberActivity</string>
+    <string name="move_member">MOVEtoMEMBER</string>
+
 </resources>
